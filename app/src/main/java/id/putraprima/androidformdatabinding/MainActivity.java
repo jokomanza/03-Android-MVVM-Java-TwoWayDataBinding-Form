@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
 import android.os.Bundle;
+import android.widget.Toast;
 
 import id.putraprima.androidformdatabinding.databinding.ActivityMainBinding;
 import id.putraprima.androidformdatabinding.models.Mahasiswa;
@@ -21,5 +22,9 @@ public class MainActivity extends AppCompatActivity {
 
         binding.setMahasiswa(mahasiswa);
         binding.setLifecycleOwner(this);
+
+        binding.btnSave.setOnClickListener(v -> {
+            Toast.makeText(this, binding.getMahasiswa().getNama().toString(), Toast.LENGTH_SHORT).show();
+        });
     }
 }
