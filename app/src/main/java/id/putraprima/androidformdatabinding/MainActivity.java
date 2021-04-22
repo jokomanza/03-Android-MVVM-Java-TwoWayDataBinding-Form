@@ -14,9 +14,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ActivityMainBinding binding = DataBindingUtil.setContentView(this,R.layout.activity_main);
+
         Mahasiswa mahasiswa = new Mahasiswa();
         mahasiswa.setJenisKelamin("Laki Laki");
         mahasiswa.setJurusan(3);
+
         binding.setMahasiswa(mahasiswa);
         binding.setLifecycleOwner(this);
     }
